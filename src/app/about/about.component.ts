@@ -17,11 +17,15 @@ export class AboutComponent implements OnInit {
    }
 
   ngOnInit() {
-    this._data.goal.subscribe(res => this.goals = res);
+    // this._data.goal.subscribe(res => this.goals = res);
+    this._data.getGoals();
+    this.goals = this._data.goals;
+    this._data.goals.length = 0;  
   }
 
   sendMeHome(){
-    this.router.navigate(['']);
+    event.preventDefault();
+    this.router.navigate(['/']);
   }
 
 }

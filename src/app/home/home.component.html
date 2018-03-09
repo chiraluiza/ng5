@@ -15,8 +15,25 @@
       </form>
     </div>
     <div class="col">
+      <p class="sm">Click on the item to make it done.</p>
       <p class="life-container" *ngFor="let goal of goals; let i= index" (click)="removeItem(i)">
-        {{ goal }}
+        {{ goal.text }}
       </p>
     </div>
   </div>
+
+  <div class="container color-dark" style="margin-top: 100px;">
+      <div class="col">
+        <p>Your done list</p>
+      </div>
+    </div>
+    <div class="container color-light" [@doneItems]="doneItems.length">
+        <div class="col">
+          <p class="life-container" *ngFor="let doneItem of doneItems; let i= index">
+            {{ doneItem.text }}
+          </p>
+        </div>
+        <div class="col" *ngIf="doneItems.length">
+          Good job! Keep going!
+        </div>
+    </div>

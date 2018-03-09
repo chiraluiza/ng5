@@ -6,6 +6,15 @@ export class AppPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('app-root ul li a')).getText();
   }
+
+  getAboutButton() {
+    return element(by.css('[routerlink="about/48"]'));
+  }
+
+  getAboutText() {
+    return element(by.css('app-about p a')).getText();
+  }
+
 }

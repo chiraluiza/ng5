@@ -1,0 +1,19 @@
+{
+  "goals": [
+    {
+      "text": "homework",
+      "done": false,
+      "id": 1
+    },
+    {
+      "text": "clean",
+      "done": false,
+      "id": 3
+    },
+    {
+      "text": "sleep",
+      "done": true,
+      "id": 4
+    }
+  ]
+}
